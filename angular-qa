@@ -1,0 +1,20 @@
+
+0. client side: refers to web browser running on a local machine as opposed to a server.
+1. What is the MVC pattern?
+Model View Controller
+Model View Components
+
+A model represents data 
+The view is how the data is rendered, the portion the user sees, views.,the user interface.
+The Controller (angular1 being phased out(clicks/user events)) in favor of Components.
+
+A component is a small/reusable package of both front and back end code that work together.
+
+
+2. MVC pattern is used throughout many different frameworks in many different languages,why do
+you think it is so useful.
+
+3. In terms of an MVC, what is a component?
+
+4. How do you decide what content should reside in a component, 
+versus what content should reside in a template?

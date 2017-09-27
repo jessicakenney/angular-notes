@@ -1,0 +1,116 @@
+#------------------------------------
+# Basic Setup 
+#------------------------------------
+Clone the repo
+navigate to project root folder
+	$ npm install
+	$ bower install
+	$ ng serve
+
+#------------------------------------
+# Angular CLI
+#------------------------------------
+# New Project Installs
+
+  $ npm install -g @angular/cli@1.0.0
+  $ npm list -g typescript   #confirm typescript
+  $ npm install -g typescript
+
+# Bower?
+$npm list -g bower
+$npm install bower -g
+$bower init
+
+# Add /bower_components to .gitignore
+
+# Bootstrap:
+	$ bower install bootstrap --save
+	# update angular-cli.json
+
+	"styles": [
+        "styles.css",
+        "../bower_components/bootstrap/dist/css/bootstrap.css"
+      ],
+
+# Generate new project with ng cli
+  $ ng new online-store
+
+# $ng serve, ng build, ng lint
+
+# $ ng g component welcome
+---> component.html(template) is in a seperate file than the Component.
+--->app.moduel.ts(root module)  will automatically get updated with new compononent.
+		-imported at top and in declarations array.
+#------------------------------------
+# Routes 
+#------------------------------------
+
+# Create app.routing.ts file:
+online-retail-store/src/app/app.routing.ts
+
+# app.routing.ts :
+<<<<
+import { ModuleWithProviders }  from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: WelcomeComponent
+  }
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+>>>>>>
+
+# For Each Component, a route needs to be added in app.routing.ts file.
+	-Every route has a Path and Component property that needs to be defined.
+
+# Update app.module.ts
+	-include 'routing' to imports.
+
+# install <router-outlet> tags to components template 
+
+#------------------------------------
+# Dynamic Routing 
+#------------------------------------
+
+#------------------------------------
+# Service 
+#------------------------------------
+
+
+#------------------------------------
+# FireBase
+#------------------------------------
+Run ng serve for a dev server. 
+Navigate to http://localhost:4200/. 
+The app will automatically reload if you change any of the source files. 
+Set up an account with Firebase.com. 
+You will be given specific credentials that will need to be stored in :
+	api-key.ts
+It will look like this: 
+	export var masterFirebaseConfig = { 
+	apiKey: "xxxx", 
+	authDomain: "xxxx.firebaseapp.com", 
+	databaseURL: "https://xxxx.firebaseio.com", 
+	projectId: "fir-test-88e40", 
+	storageBucket: "xxxx.appspot.com", 
+	messagingSenderId: "xxxx" 
+};
+
+
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD3BbqQ8qjp7mnfhkjJZbjMJz-Um7pubm8",
+    authDomain: "sheridan-33ce9.firebaseapp.com",
+    databaseURL: "https://sheridan-33ce9.firebaseio.com",
+    projectId: "sheridan-33ce9",
+    storageBucket: "",
+    messagingSenderId: "77189366850"
+  };
+  firebase.initializeApp(config);
+</script>
